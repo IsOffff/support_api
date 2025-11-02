@@ -1,9 +1,8 @@
 export default {
   testEnvironment: "node",
-  transform: {}, // pas de Babel, pur ESM
-  extensionsToTreatAsEsm: [".js"],
+  transform: {}, 
   moduleNameMapper: {
-    "^(\\.{1,2}/.*)\\.js$": "$1",
+    "^(\\.{1,2}/.*)\\.js$": "$1", 
   },
   coverageThreshold: {
     global: {

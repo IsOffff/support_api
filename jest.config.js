@@ -1,8 +1,8 @@
 export default {
   testEnvironment: "node",
-  transform: {}, 
+  transform: {},
   moduleNameMapper: {
-    "^(\\.{1,2}/.*)\\.js$": "$1", 
+    "^(\\.{1,2}/.*)\\.js$": "$1",
   },
   coverageThreshold: {
     global: {

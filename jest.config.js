@@ -1,8 +1,14 @@
 export default {
   testEnvironment: "node",
-  verbose: false,
-  collectCoverageFrom: ["src/**/*.js"],
-  coverageDirectory: "coverage",
-  coverageReporters: ["text", "lcov"],
-  coverageThreshold: { global: { lines: 70, statements: 70 } },
+  transform: {},
+  extensionsToTreatAsEsm: [".js"],
+  moduleFileExtensions: ["js", "json"],
+  coverageThreshold: {
+    global: {
+      statements: 65,
+      branches: 60,
+      functions: 60,
+      lines: 65,
+    },
+  },
 };

@@ -1,11 +1,11 @@
-
 import request from "supertest";
 import app from "../src/server.js";
 import { connectDB, clearDB, disconnectDB } from "../src/config/database.js";
 import RequestType from "../src/models/RequestType.js";
 
 beforeAll(async () => {
-  const uri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/support_api_test";
+  const uri =
+    process.env.MONGO_URI || "mongodb://127.0.0.1:27017/support_api_test";
   await connectDB(uri);
 });
 

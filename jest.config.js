@@ -1,1 +1,8 @@
-export default { testEnvironment: "node", verbose: false, collectCoverageFrom: ["src/**/*.js"], coverageDirectory: "coverage", coverageReporters: ["text","lcov"], coverageThreshold: { global: { lines: 70, statements: 70 } } };
+export default {
+  testEnvironment: "node",
+  verbose: false,
+  collectCoverageFrom: ["src/**/*.js"],
+  coverageDirectory: "coverage",
+  coverageReporters: ["text", "lcov"],
+  coverageThreshold: { global: { lines: 70, statements: 70 } },
+};

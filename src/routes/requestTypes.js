@@ -1,4 +1,3 @@
-
 import express from "express";
 import RequestType from "../models/RequestType.js";
 

@@ -1,8 +1,6 @@
 export default {
   testEnvironment: "node",
   transform: {},
-  extensionsToTreatAsEsm: [".js"],
-  moduleFileExtensions: ["js", "json"],
   coverageThreshold: {
     global: {
       statements: 65,

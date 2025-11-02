@@ -1,6 +1,7 @@
 export default {
   testEnvironment: "node",
-  transform: {},
+  transform: {}, // pas besoin de Babel
+  testPathIgnorePatterns: ["/node_modules/", "/e2e/"],
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1",
   },

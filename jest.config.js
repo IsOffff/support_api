@@ -3,7 +3,7 @@ export default {
   transform: {}, // pas de Babel, pur ESM
   extensionsToTreatAsEsm: [".js"],
   moduleNameMapper: {
-    "^(\\.{1,2}/.*)\\.js$": "$1", 
+    "^(\\.{1,2}/.*)\\.js$": "$1",
   },
   coverageThreshold: {
     global: {

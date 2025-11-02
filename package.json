@@ -11,8 +11,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_ENV=test jest --runInBand --coverage --passWithNoTests"
-,
+    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_ENV=test jest --runInBand --coverage --passWithNoTests",
     "prepare": "husky install",
     "e2e": "playwright test || echo 'E2E désactivés (scaffold présent)'"
   },

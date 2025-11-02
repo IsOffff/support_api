@@ -1,8 +1,11 @@
-# Support API (Node.js + MongoDB)
+# Support API - GitHub Actions CI/CD
 
-API REST pour gérer des **RequestTypes**
+![CI](https://github.com/IsOffff/support_api/workflows/CI/badge.svg)
+![E2E](https://github.com/IsOffff/support_api/workflows/E2E%20Tests/badge.svg)
+API REST développée en **Node.js** et **MongoDB** pour la gestion des _RequestTypes_.  
+Ce projet met en œuvre une **intégration continue (CI)** avec **GitHub Actions**, selon les exigences du TP.
 
-## Démarrage
+## Installation
 
 ```bash
 cp .env.example .env
@@ -10,30 +13,3 @@ npm install
 docker compose up -d
 npm run dev
 ```
-
-- API: http://localhost:3000
-- mongo-express: http://localhost:8081
-
-## Endpoints
-
-- GET /health
-- GET /api/request-types
-- GET /api/request-types/:id
-- POST /api/request-types
-
-## Tests & Couverture (>= 70%)
-
-```bash
-npm test
-```
-
-## CI/CD
-
-Workflow `ci.yml`: lint + format + tests (service Mongo) + artefact coverage.
-
-## Git/Qualité (grille)
-
-- PR requises (template fourni)
-- CODEOWNERS pour review obligatoire
-- ESLint + Prettier + Husky + lint-staged
-- Docker-compose pour reproductibilité

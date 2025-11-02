@@ -16,7 +16,7 @@ if (process.env.NODE_ENV !== "test") {
   (async () => {
     try {
       await connectDB();
-      app.listen(PORT, () => console.log(`🚀 API : http://localhost:${PORT}`));
+      app.listen(PORT, () => console.log(` API : http://localhost:${PORT}`));
     } catch (e) {
       console.error("Erreur de démarrage :", e);
       process.exit(1);

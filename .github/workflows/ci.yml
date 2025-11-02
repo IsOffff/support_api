@@ -26,28 +26,23 @@ jobs:
         image: mongo:6
         ports:
           - 27017:27017
-
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: npm ci
-
-      - name: Attendre Mongo
+      - name: Attendre MongoDB
         run: |
           for i in {1..30}; do
-            nc -z localhost 27017 && echo " Mongo ready" && exit 0
-            echo " Waiting for Mongo..."; sleep 1
+            nc -z localhost 27017 && echo "Mongo prêt" && exit 0
+            echo " En attente de Mongo..."; sleep 1
           done
-          echo "Mongo did not start in time" && exit 1
-
-      - name: Run tests
-        run: npm test -- --passWithNoTests
-
+          echo " Mongo n'a pas démarré à temps" && exit 1
+      - run: npm test
       - name: Publier la couverture
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-lcov
-          path: coverage
+          name: coverage
+          path: coverage/
